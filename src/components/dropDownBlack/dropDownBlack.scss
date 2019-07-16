@@ -1,0 +1,57 @@
+.dropDownBox {
+  position: relative;
+  margin-right: 1rem;
+  border-bottom: 0.125rem solid transparent;
+  padding: 0 0.125rem;
+
+  &__select {
+    display: grid;
+    grid-template-columns: repeat(2, minMax(auto, auto));
+    grid-column-gap: 0.25rem;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &--withIcon {
+      grid-template-columns: repeat(3, minMax(auto, auto));
+    }
+
+    &:hover > img {
+      filter: brightness(0%);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--border {
+    border-color: #ffa500;
+
+    & img {
+      filter: brightness(0%);
+    }
+  }
+}
+
+.dropDownContainer {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  color: #000;
+  min-width: 100%;
+  z-index: 1;
+
+  &__item {
+    padding: 0.5rem;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+      background-color: #fff;
+    }
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.projectSwitcher {
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    overflow-x: scroll;
+    .dashboard__navigation--tabs {
+      width: 500px;
+    }
+    .boardBody__wrapper--scrollable {
+      overflow-y: visible;
+    }
+    .listBoard__wrapper {
+      width: 500px;
+    }
+  }
+
+}

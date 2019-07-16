@@ -1,0 +1,382 @@
+.columnSettings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+
+  @media screen and (max-width: 1110px) {
+    overflow: scroll;
+  }
+  &__title {
+    color: #fff;
+  }
+
+  &__description {
+    color: rgba(256, 256, 256, 0.6);
+  }
+
+  &__subWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(256, 256, 256, 0.75);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__header {
+    padding: 0 1.875rem;
+    @media screen and (max-width: 1110px) {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    min-width: 69.375rem;
+    max-width: 69.375rem;
+    min-height: 31.25rem;
+    max-height: 90%;
+    margin: auto;
+    background-color: #000000;
+    box-shadow: 0 21px 29px -1px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5rem 0 1.25rem 0;
+    font-size: 0.875rem;
+    @media screen and (max-width: 1110px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      min-height: 100%;
+      max-height: none;
+      max-width: none;
+      min-width: auto;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    right: 1rem;
+    top: 1rem;
+    position: absolute;
+    padding: 0.5rem;
+  }
+  &__items {
+    width: 100%;
+    margin: 1.875rem 0 1.25rem 0;
+
+    & > .wrapper-colum {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @media screen and (max-width: 1110px) {
+        flex-direction: column;
+      }
+      & div {
+        margin-right: 5px;
+        @media screen and (max-width: 1110px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__item {
+    min-width: 7.36rem;
+    border-radius: 0.125rem;
+    padding: 0 24px;
+    min-height: 3.375rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.125rem;
+    user-select: none;
+    position: relative;
+    margin-bottom: 0.625rem;
+    background-color: rgba(256, 256, 256, 0.1);
+    color: #fff;
+    @media screen and (max-width: 1110px) {
+      img {
+        display: block;
+      }
+    }
+    &:hover {
+      color: #000000;
+      background-color: #ffd700;
+      img {
+        display: block;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-right: 0.625rem;
+    }
+    &--noActive {
+      padding: 0 16px;
+      &:hover {
+        color: #fff;
+        background-color: rgba(256, 256, 256, 0.1);
+        cursor: default;
+      }
+    }
+    &--draggable,
+    &--active {
+      cursor: pointer;
+      &:before {
+        content: "";
+        background: url("../../../../assets/icons/ic-draggable.svg") no-repeat center;
+        background-size: contain;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        left: 0.4375rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &--active {
+      color: white;
+      filter: brightness(1);
+      &:before {
+        filter: brightness(100);
+      }
+    }
+    &--empty {
+      border: 0.0625rem dotted #000000;
+    }
+  }
+  &__itemClose {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 0.625rem;
+    transform: translateY(-50%);
+    filter: invert(1);
+    display: none;
+  }
+  &__body {
+    background-color: rgba(144, 40, 23, 0.03);
+    box-shadow: inset 0 -0.0625rem 0 0 rgba(0, 0, 0, 0),
+    inset 0 0.0625rem 0 0 rgba(0, 0, 0, 0.04);
+    width: 100%;
+    margin: auto;
+    padding: 1.875rem;
+    &--main {
+      overflow: auto;
+      padding: 0 1.875rem 1.875rem;
+      box-shadow: none;
+    }
+  }
+  &__titleRow {
+    padding: 1.25rem 0 0.75rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 0.625rem;
+  }
+  &__itemsRow {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  &__itemRow {
+    width: 24%;
+    min-width: 24%;
+    margin: 0 5px;
+  }
+  &__plus {
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 2.25rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  &__fieldRow {
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 0.125rem;
+    margin: 0 0.375rem 0.25rem 0;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+    user-select: none;
+
+    &--noActive {
+      border: 0.0625rem dotted rgba(0, 0, 0, 0.2);
+    }
+    &--active {
+      border: 0.0625rem solid rgba(0, 0, 0, 0.2);
+      background-color: rgba(256, 256, 256, 0.1);
+      color: #fff;
+      cursor: pointer;
+      @media screen and (max-width: 1110px) {
+        &:after {
+          background: url("../../../../assets/icons/ic-add-about.svg") no-repeat center;
+
+        }
+      }
+      & > span {
+        span > span {
+          opacity: 0.6;
+        }
+        .filter-letters {
+          opacity: 1;
+          color: #ffd700;
+          background-color: rgba(255, 215, 0, 0.5);
+        }
+      }
+      &:hover {
+        color: #000000;
+        background-color: #ffd700;
+        & > span {
+          span > span {
+            opacity: 1;
+          }
+          .filter-letters {
+            color: #000000;
+          }
+        }
+
+        &:after {
+          background: url("../../../../assets/icons/inverse.svg") no-repeat center;
+        }
+      }
+      &:after {
+        content: "";
+        background-size: contain;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &--select {
+      background-color: rgba(256, 256, 256, 0.1);
+      color: rgba(256, 256, 256, 0.25);
+      &:after {
+        content: "";
+        background: url("../../../../assets/icons/ic-added.svg") no-repeat center;
+        background-size: contain;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__searchItem {
+    width: 24%;
+    position: relative;
+  }
+  &__search {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+  }
+  &__searchInput {
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid #ffffff;
+    height: 30px;
+    font-size: 0.875rem;
+    padding-left: 1.5rem;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    color: #fff;
+    &:focus {
+      border-bottom: 0.0625rem solid #ffa500;
+    }
+  }
+  &__footer {
+    width: 100%;
+    padding: 1.25rem 1.875rem 0 1.875rem;
+    display: flex;
+    min-height: 3.5rem;
+  }
+  &__save {
+    min-width: 24%;
+    font-size: 0.875rem;
+    margin-left: 5px;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #ffa600;
+  }
+  &__searchItemFooter {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .columnSettings__items > .wrapper-colum div {
+    margin-right: 0;
+  }
+  .columnSettings {
+    &__item-tokenName{
+      opacity: 0.5;
+    }
+    &__itemsRow {
+      justify-content: space-between;
+    }
+    &__itemRow {
+      width: 31.5%;
+      min-width: 31.5%;
+    }
+    &__save {
+      width: 32%;
+      min-width: 32%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .columnSettings {
+
+    &__itemRow {
+      width: 48.5%;
+      min-width: 48.5%;
+      margin: 0;
+    }
+    &__save {
+      width: 49%;
+      min-width: 49%;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .columnSettings {
+    &__itemRow {
+      width: 100%;
+      min-width: 100%;
+      margin: 0;
+    }
+    &__save {
+      width: 49%;
+      min-width: 49%;
+    }
+  }
+}

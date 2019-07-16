@@ -1,0 +1,21 @@
+$gray: #7F7F7F;
+$main-color: #495290;
+$orange: #FFA500;
+$green: #02C88A;
+$red: #FF415F;
+
+@function rem($px) {
+
+  $result: $px/16;
+
+  @return #{$result}rem;
+}
+
+p, span, a, div:not(.ticker,.ticker_element,.newsLine,.newsLine__list, .newsLine__item,.newsLine__name,.newsLine__price), img, h1, h2, button {
+  transition: .25s;
+}
+
+a {
+  font-size: unset;
+  color: unset;
+}

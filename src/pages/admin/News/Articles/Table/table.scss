@@ -1,0 +1,110 @@
+@import '../../../../../styles/varible.scss';
+
+
+.admin {
+  &__table {
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(0, 0, 0, .4);
+      font-size: rem(10);
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      .admin__table-item--title {
+        color: rgba(0, 0, 0, .4);
+        font-size: rem(10);
+        text-transform: uppercase;
+
+      }
+
+    }
+
+
+
+    &-row {
+      font-size: rem(12);
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &--hidden{
+        .admin__table-item {
+          color: #7f7f7f;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 70px;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &--title {
+        width: rem(420);
+        font-size: rem(14);
+        color: #495290;
+      }
+
+      &--time {
+        width: rem(75);
+      }
+
+      &--source {
+        width: rem(95);
+      }
+
+      &--status {
+        width: rem(62);
+      }
+
+      &--action {
+        width: rem(30);
+      }
+    }
+
+    &-action-btn {
+      position: relative;
+      border: none;
+      cursor: pointer;
+    }
+
+    &-action-popup {
+      display: flex;
+      align-items: flex-start;
+      padding-left: 30px;
+      justify-content: center;
+      position: absolute;
+      right: rem(5);
+      z-index: 1;
+      width: rem(137);
+      height: rem(140);
+      box-shadow: 0 21px 29px -1px rgba(0, 0, 0, 0.2);
+      background-color: #000000;
+      flex-direction: column;
+      top: -12px;
+      .admin__table-action-btn{
+        position: absolute;
+        top: 0;
+        right: 10px;
+      }
+      a, button {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 40px;
+        color: rgba(255, 255, 255, .6);
+        border:none;
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+}

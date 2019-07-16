@@ -1,0 +1,83 @@
+@import '../../../../styles/varible';
+
+.customTooltip {
+  position: relative;
+  left: 0;
+  transform: translate(-60%);
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.625rem;
+  letter-spacing: 0.025rem;
+  font-weight: 700;
+  min-width: 6rem;
+  padding: 0.25rem 0;
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //position: absolute;
+    //top: 300%;
+  }
+}
+
+.recharts-tooltip-wrapper {
+  //transform: translate(-50%) !important;
+  top: 4rem !important;
+  transition: unset !important;
+  z-index: 11;
+}
+
+.recharts-responsive-container {
+  min-height: 30rem;
+}
+
+.responsiveBlock {
+  width: calc(100% - 3.75rem) !important;
+  height: 4rem !important;
+
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
+}
+
+.chartBody {
+  &__linearContainer {
+    height: 20rem;
+    max-height: 17.375rem !important;
+
+    & > div:first-child > svg:first-child[view-box] {
+      width: rem(1048);
+    }
+  }
+}
+
+.custom-tooltip {
+  background-color: #000 !important;
+  color: #fff;
+  font-size: 0.625rem;
+  position: absolute !important;
+  padding: 0 0.625rem;
+  transform: translate(0%);
+}
+
+.recharts-tooltip-wrapper {
+  //top: 0 !important;
+  //right: 0 !important;
+}
+
+.recharts-tooltip-wrapper-right {
+  //top: 0 !important;
+  //right: 0 !important;
+}
+
+.recharts-tooltip-wrapper-top {
+  //top: 0 !important;
+  //right: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .custom-tooltip {
+    display: none !important;
+  }
+}

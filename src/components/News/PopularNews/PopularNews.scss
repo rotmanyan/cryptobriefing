@@ -1,0 +1,29 @@
+.wrapper-popular-news {
+  width: 330px;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .block-popular-news {
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px rgba(151, 151, 151, 0.3);
+    &:last-child {
+      border: none;
+    }
+  }
+  .views-source {
+    font-size: 12px;
+    font-weight: 500;
+    color: #7f7f7f;
+    padding-bottom: 8px;
+  }
+  .title-block-new {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.43;
+    color: #495290;
+  }
+}

@@ -1,0 +1,138 @@
+.navigation__back {
+  display: block;
+  height: 26px;
+  width: 141px;
+  border: 1px solid #ffa500;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffa500;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  background: transparent;
+  padding-bottom: 20px;
+}
+
+.hamburger-slim {
+  background: transparent;
+  border: none;
+  position: relative;
+  height: 12px;
+  width: 18px;
+  bottom: 3px;
+
+  &:before,
+  &:after {
+    background: #fff;
+    backface-visibility: hidden;
+    content: '';
+    height: 2px;
+    left: 0;
+    transition: 0.75s;
+    width: 18px;
+  }
+
+  &:before {
+    box-shadow: #fff 0 14px 0 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: calc(100% - 5px);
+  }
+
+  &--active {
+    &:before {
+      box-shadow: transparent 0 0 0 0;
+      top: 50%;
+      transform: rotate(225deg);
+    }
+
+    &:after {
+      top: 50%;
+      transform: rotate(315deg);
+    }
+  }
+}
+.burger {
+  &__header {
+    display: none;
+  }
+  &__handler {
+    color: #fff;
+  }
+  &__wrapper {
+    color: #7f7f7f;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 60px;
+    background: #000;
+    z-index: 999;
+  }
+  &__inner {
+    overflow: scroll;
+    height: calc(100% - 250px);
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    position: relative;
+    margin: 0 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 13px 0;
+
+    &--active {
+      color: #fff;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        background-color: #ffa600;
+        left: -18px;
+        top: 0;
+      }
+    }
+  }
+  &__account {
+    margin-top: 60px;
+    padding: 0 18px;
+    height: 250px;
+  }
+  &__account-title {
+    font-size: 9px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    button {
+      border: none;
+      color: #7f7f7f;
+      text-align: left;
+      position: relative;
+      font-size: unset;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 13px 0;
+    }
+    .loginSign__button--signUp {
+      margin-left: 0;
+      border-bottom: none;
+    }
+  }
+}

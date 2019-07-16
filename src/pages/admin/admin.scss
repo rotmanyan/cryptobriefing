@@ -1,0 +1,137 @@
+@import '../../styles/varible.scss';
+
+.admin {
+  &__inner {
+    display: flex;
+    margin-top: rem(150);
+    justify-content: space-between;
+    min-height: 500px;
+  }
+
+  &__user-text {
+    color: #8f8f8f;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+
+  &__role {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    border: none;
+    padding-bottom: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #8b8b8b;
+    margin-top: 17px;
+    margin-bottom: -1px;
+    &--active {
+      color: #000000;
+      border-bottom: 2px solid #ff9200;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &-wrapper {
+    width: 800px;
+  }
+
+  &__articles--filters {
+    height: 39px;
+
+    .button-source {
+      margin-left: 0;
+    }
+
+    .navigation__item {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .admin__articles-tabs {
+      display: flex;
+      margin: 0 30px;
+      height: 39px;
+    }
+
+    .block-filter {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .admin__articlesFilter-left {
+      display: flex;
+    }
+  }
+
+  &__listed {
+    .basicDropDown__wrapper {
+      position: relative;
+      text-align: left;
+
+      &::after {
+        background-color: #ffa500;
+      }
+
+      &::before {
+        content: '';
+        background-image: url('../../assets/icons/ic-select-dark.svg');
+        position: absolute;
+        width: 8px;
+        height: 10px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .basicDropDown__input {
+      position: relative;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+}
+
+.admin__edit-reset-password-btn {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  height: 30px;
+  width: 143px;
+  border: 1px solid #495290;
+  border-radius: 4px;
+  color: #495290;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+}
+
+.button-create-new-user {
+  height: 48px;
+  width: 240px;
+  border-radius: 4px;
+  background-color: #495290;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.admin__table--users {
+  margin-top: 50px;
+}
+.wrapper-btns--admin {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

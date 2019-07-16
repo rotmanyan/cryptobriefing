@@ -1,0 +1,13 @@
+.singUp
+{
+  .cancel
+  {
+    background: transparent;
+    border:     1px solid black;
+    color:      black;
+    &:hover
+    {
+      border: 1px solid #495290;
+    }
+  }
+}

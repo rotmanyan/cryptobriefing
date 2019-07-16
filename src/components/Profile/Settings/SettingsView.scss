@@ -1,0 +1,57 @@
+.wrapper-profile-settings {
+  width: 510px;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+  .block-settings {
+    margin-bottom: 40px;
+  }
+
+  .title-block-settings {
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: #000000;
+  }
+
+  .item-settings {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+
+  .line-bottom {
+    border-bottom: dotted 1px rgba(151, 151, 151, 0.3);
+  }
+
+  .name-settings {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #000000;
+  }
+
+  .wrapper-button {
+    .button-delete {
+      border-radius: 4px;
+      border: none;
+      background-color: #495290;
+      font-size: 14px;
+      line-height: 48px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 70px;
+      cursor: pointer;
+      @media only screen and (max-width: 550px) {
+        width: 100%;
+      }
+    }
+  }
+}

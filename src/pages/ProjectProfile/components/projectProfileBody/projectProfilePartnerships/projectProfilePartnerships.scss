@@ -1,0 +1,44 @@
+.projectPartnerships
+{
+  margin-bottom: 4.0625rem;
+  margin-top: 3.125rem;
+  &__title {
+    margin-bottom: 1.125rem;
+    font-weight: bold;
+
+  }
+  &__wrapper
+  {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img
+     {
+      margin-left: 0;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      @media screen and (max-width: 1090px) {
+        margin-right: 1rem;
+        &:nth-child(3n) {
+          margin-right: 1rem;
+        }
+      }
+      @media screen and (max-width: 790px) {
+        margin-left: 0;
+        margin-right: 2rem;
+        margin-bottom: 0.5rem;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+     }
+
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+}

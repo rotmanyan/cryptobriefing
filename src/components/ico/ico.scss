@@ -1,0 +1,15 @@
+@import "../../styles/varible";
+
+.icoSto {
+  &__routing {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 64%;
+  }
+
+  &__routingBox {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(auto, auto));
+    grid-column-gap: rem(30);
+  }
+}

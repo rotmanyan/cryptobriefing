@@ -1,0 +1,135 @@
+@import '../../../styles/varible';
+
+.wrapper-news-list {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  min-height: 50vh;
+  max-height: calc(100vh - 24.1125rem);
+
+  .wrapper-news-block {
+    max-width: rem(600);
+  }
+
+  .wrapper-news-block {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: solid 1px rgba(151, 151, 151, 0.3);
+    margin-bottom: 20px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .wrapper-img {
+    margin-right: 30px;
+  }
+
+  .logo-new {
+    min-width: rem(150);
+    max-width: rem(150);
+    min-height: rem(150);
+    max-height: rem(150);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .title-block-new {
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 1.39;
+    color: #495290;
+  }
+
+  .wrapper-data-hashtag {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .data-source-in-block-news {
+    font-size: rem(12);
+    font-weight: 500;
+    color: #7f7f7f;
+  }
+
+  .hashtag-in-block-news {
+    font-size: rem(12);
+    font-weight: 500;
+    color: #495290;
+    cursor: pointer;
+  }
+
+  .info-block-new {
+    margin-top: 10px;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.57;
+    color: #000000;
+  }
+
+  .wrapper-advertising {
+    width: 600px;
+    border: solid 2px #ffa500;
+    padding: 24px 30px 36px;
+    margin-bottom: 50px;
+
+    .marker-advertising {
+      font-size: rem(12);
+      font-weight: bold;
+      color: #ffa500;
+    }
+
+    .title-advertising {
+      font-size: rem(24);
+      font-weight: bold;
+      line-height: 1.25;
+      color: #000000;
+      margin-top: 13px;
+      margin-bottom: 10px;
+    }
+
+    .text-advertising {
+      opacity: 0.6;
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: 1.71;
+      color: #000000;
+    }
+  }
+
+  .actual-category {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.43;
+    color: #000000;
+    border-radius: 4px;
+    border: solid 1px #000000;
+    padding: 6px 13px;
+    margin-bottom: 30px;
+  }
+
+  .close {
+    height: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .wrapper-not-news {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .info-not-found {
+    font-size: 18px;
+    font-weight: bold;
+    width: 280px;
+    line-height: 1.44;
+    margin: 0 auto;
+    color: #000000;
+    padding-right: 60px;
+  }
+}

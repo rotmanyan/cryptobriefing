@@ -1,0 +1,82 @@
+.admin {
+  &__navigationWrapper {
+    padding-left: 15px;
+  }
+
+  &__back-btn {
+    position: relative;
+    height: 18px;
+    width: 36px;
+    color: #1A1A1A;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-left: 17px;
+    margin-top: 10px;
+    &::before {
+      content: url('../../../assets/icons/ic-back-dark.svg');
+      position: absolute;
+      width: 10px;
+      height: 16px;
+      top:-1px;
+
+      left: 0;
+    }
+  }
+
+  &__navigationSection {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__navigationTitle {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 41px;
+    color: #495290;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 12px;
+
+    &--active {
+      color: #000000;
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 3px;
+        background-color: #FFA600;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__navigationLink {
+    display: block;
+    margin-bottom: 8px;
+    color: #495290;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__navigationActiveLink {
+    color: #000000;
+  }
+
+}
+
+
+.admin__navigationItems {
+  display: flex;
+  flex-direction: column;
+}
+

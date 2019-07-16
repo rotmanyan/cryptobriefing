@@ -1,0 +1,66 @@
+.usersWrapper {
+  display: flex;
+}
+
+.admin {
+  &__table {
+    &--users {
+      .admin__table-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .admin__table-action-popup {
+        height: 180px;
+        width: 147px;
+        top: 0;
+
+      }
+    }
+
+
+
+  }
+
+  &__table-item {
+    &--avatar {
+      width: 40px;
+
+      img {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        height: 38px;
+        width: 38px;
+      }
+    }
+
+    &--name {
+      width: 150px;
+      text-align: left;
+    }
+
+    &--country {
+      width: 105px;
+    }
+
+    &--email {
+      width: 200px;
+    }
+
+    &--role {
+      width: 100px;
+    }
+  }
+}
+
+img.admin__table-search {
+  position: relative;
+  top: 1px;
+  width: 21px;
+  height: 21px;
+}
+
+.admin__table-action-popup .admin__table-action-delete-user {
+  color: #FF415F;
+}

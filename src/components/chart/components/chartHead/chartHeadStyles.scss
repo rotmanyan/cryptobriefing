@@ -1,0 +1,57 @@
+.chartHead {
+  margin-bottom: 2rem;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+  }
+
+  &__selectedMenu {
+    display: grid;
+    grid-template-columns: 2rem repeat(8, minmax(5.625rem, auto));
+    grid-column-gap: 0.625rem;
+    align-items: center;
+    max-width: max-content;
+  }
+
+  &__dnd {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(auto, auto));
+  }
+
+  &__routingBox {
+    align-items: center;
+    grid-template-columns: repeat(8, minmax(auto, auto));
+  }
+
+  &__icon {
+    justify-self: center;
+    cursor: pointer;
+  }
+  .listed__search {
+    position: absolute;
+    width: 398px;
+    background-color: #000000;
+    box-shadow: 0 21px 29px -1px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-top: 20px;
+  }
+  .listed__input {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding-left: 20px;
+    width: 358px;
+  }
+  .searchList__item {
+    padding: 0 20px;
+  }
+  .listed__label {
+    position: relative;
+    left: 14px;
+  }
+}

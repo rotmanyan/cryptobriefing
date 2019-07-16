@@ -1,0 +1,53 @@
+@import "varible";
+
+.searchList {
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    padding: rem(20) 0;
+    z-index: 1;
+    min-width: rem(398);
+    max-height: rem(398);
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: rem(40) auto;
+    grid-column-gap: rem(20);
+    color: #ffffff;
+    line-height: rem(31);
+    padding: 0 rem(36);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    min-width: 100%;
+    font-size: .875rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &--block {
+      cursor: unset;
+      display: flex;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+  }
+
+  &__symbol {
+    font-weight: 700;
+  }
+
+  &__name {
+
+  }
+}
+
